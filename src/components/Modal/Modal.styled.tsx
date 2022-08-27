@@ -65,29 +65,12 @@ export const StyledModalWrapper = styled.div<{ close: boolean }>`
   position: relative;
   height: 420px;
   width: 300px;
-  padding: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .modal-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    .modal-title {
-      font-size: 20px;
-      font-weight: bold;
-      padding: 20px 0;
-    }
-    .modal-body {
-    }
+  padding: 25px;
+
     .button-group {
       position: absolute;
-      bottom: 0;
-      right: 0;
-
-      & > :not(:last-child) {
-        margin-right: 6px;
-      }
+      bottom: 10px;
+      right: 10px;
     }
   }
 `;

@@ -1,7 +1,9 @@
 import { useState } from "react";
 import Portal from "@/components/common/Portal";
-import Button from "@/components/common/Button";
-import { StyledMask, StyledModalWrapper } from "./Modal.styled";
+import {
+  StyledMask,
+  StyledModalWrapper,
+} from "@/components/Modal/Modal.styled";
 
 type TProps = {
   id?: string;
@@ -16,11 +18,6 @@ const Modal = ({ id, onConfirm, onClose, children }: TProps) => {
 
   const handleModalClose = () => {
     setClose(true);
-  };
-
-  const handleConfirm = () => {
-    onConfirm();
-    handleModalClose();
   };
 
   const handleAnimationEnd = () => {
