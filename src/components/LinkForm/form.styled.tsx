@@ -69,8 +69,8 @@ export const StyledModalWrapper = styled.div<{ close: boolean }>`
 
     .button-group {
       position: absolute;
-      bottom: 10px;
-      right: 10px;
+      bottom: 20px;
+      right: 25px;
     }
   }
 `;

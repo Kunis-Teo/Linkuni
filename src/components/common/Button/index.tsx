@@ -24,6 +24,17 @@ const StyledButton = styled.button<{ color: string }>`
   &:active {
     opacity: 0.9;
   }
+
+  &:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+    scale: 1.01;k
+  }
+
+  :focus{
+    outline: none !important;
+    border:1px solid #666; 
+  }
+
 `;
 
 const Button = ({ color = "white", children, ...restProps }: TProps) => {

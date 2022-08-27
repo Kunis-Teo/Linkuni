@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaLink } from "react-icons/fa";
+import { FaPaperclip } from "react-icons/fa";
 import FormInput from "./FormInput";
 import Button from "@/components/common/Button";
 import styled from "styled-components";
@@ -17,7 +17,9 @@ type UrlFormProps = {
 const StyledTitle = styled.div`
   margin-top: 10px;
   text-align: center;
-  font-size: 20px;
+  color: #666;
+  font-weight: 500;
+  font-size: 18px;
 `;
 
 const UrlFormContent = ({ linkData, onConfirm, onClose }: UrlFormProps) => {
@@ -49,7 +51,7 @@ const UrlFormContent = ({ linkData, onConfirm, onClose }: UrlFormProps) => {
       <StyledModalWrapper close={close}>
         <form onSubmit={handleClickSubmit}>
           <StyledTitle>
-            <FaLink />
+            <FaPaperclip />
             <span> {linkData ? "링크 수정" : "링크 추가"}</span>
           </StyledTitle>
           <FormInput name="link" label="링크" />
@@ -62,7 +64,7 @@ const UrlFormContent = ({ linkData, onConfirm, onClose }: UrlFormProps) => {
             <Button color="gray" onClick={handleModalClose}>
               CANCEL
             </Button>
-            <Button color="skyblue" onClick={handleConfirm}>
+            <Button color="#F6BC4B" onClick={handleConfirm}>
               SAVE
             </Button>
           </div>
