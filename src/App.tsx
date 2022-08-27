@@ -1,10 +1,13 @@
-import React from 'react';
+import React from "react";
+
+import SearchPage from "@/components/SearchPage/SearchPage";
+import { Wrapper } from "./App.styled";
 
 function App() {
   return (
-    <div>
-      asdf
-    </div>
+    <Wrapper>
+      <SearchPage />
+    </Wrapper>
   );
 }
 
