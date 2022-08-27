@@ -55,7 +55,7 @@ const UrlFormContent = ({ linkData, onConfirm, onClose }: UrlFormProps) => {
           CANCEL
         </Button>
         <Button color="skyblue" onClick={handleConfirm}>
-          SUBMIT
+          SAVE
         </Button>
       </div>
     </form>

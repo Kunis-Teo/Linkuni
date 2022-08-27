@@ -9,10 +9,11 @@ type TProps = {
 const StyledButton = styled.button<{ color: string }>`
   background-color: ${({ color }) => color};
   cursor: pointer;
-  padding: 10px 30px;
+  margin: 5px;
+  padding: 10px 15px;
   outline: none;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   color: white;
   font-weight: 500;
   cursor: pointer;
