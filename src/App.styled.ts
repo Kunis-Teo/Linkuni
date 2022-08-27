@@ -5,18 +5,3 @@ export const Wrapper = styled.div`
   max-width: 600px;
   height: 100%;
 `;
-
-export const SearchPageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 300px;
-`;
-
-export const AddButton = styled.img`
-  :hover {
-    cursor: pointer;
-  }
-`;
