@@ -1,13 +1,10 @@
-import React from "react";
-
-import Login from "@/components/Login/Login";
-import { Wrapper } from "./App.styled";
+import React from 'react';
 
 function App() {
   return (
-    <React.StrictMode>
-      <Login />
-    </React.StrictMode>
+    <div>
+      asdf
+    </div>
   );
 }
 
