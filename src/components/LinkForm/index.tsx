@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Button from "@/components/common/Button";
-import Modal from "@/components/Modal/index";
 import { FaPlus, FaPen } from "react-icons/fa";
 import UrlFormContent from "../Form/UrlFormContent";
 
@@ -20,13 +19,11 @@ const LinkForm = ({ linkData }) => {
         {linkData ? <FaPen /> : <FaPlus />}
       </Button>
       {visible && (
-        <Modal onConfirm={handleModalConfirm} onClose={handleModalClose}>
-          <UrlFormContent
-            linkData={linkData}
-            onConfirm={handleModalConfirm}
-            onClose={handleModalClose}
-          />
-        </Modal>
+        <UrlFormContent
+          linkData={linkData}
+          onConfirm={handleModalConfirm}
+          onClose={handleModalClose}
+        />
       )}
     </>
   );

@@ -6,7 +6,7 @@ import styled from "styled-components";
 import {
   StyledMask,
   StyledModalWrapper,
-} from "@/components/Modal/Modal.styled";
+} from "@/components/LinkForm/form.styled";
 
 type UrlFormProps = {
   linkData?: string | null;
