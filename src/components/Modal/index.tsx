@@ -35,14 +35,6 @@ const Modal = ({ id, onConfirm, onClose, children }: TProps) => {
         <StyledModalWrapper close={close}>
           <div className="modal-content">
             <div className="modal-body">{children}</div>
-            <div className="button-group">
-              <Button color="gray" onClick={handleModalClose}>
-                CANCEL
-              </Button>
-              <Button color="skyblue" onClick={handleConfirm}>
-                SAVE
-              </Button>
-            </div>
           </div>
         </StyledModalWrapper>
       </StyledMask>

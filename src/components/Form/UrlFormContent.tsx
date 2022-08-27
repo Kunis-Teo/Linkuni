@@ -1,10 +1,38 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { FaLink } from "react-icons/fa";
 import FormInput from "./FormInput";
+import Button from "@/components/common/Button";
+import styled from "styled-components";
 
-const UrlFormContent = ({ linkData }) => {
-  const [inputData, setInputData] = useState<string | null>(null);
+type UrlFormProps = {
+  linkData?: string | null;
+  onConfirm: () => void;
+  onClose: () => void;
+};
 
+const StyledTitle = styled.div`
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+`;
+
+const UrlFormContent = ({ linkData, onConfirm, onClose }: UrlFormProps) => {
+  const [close, setClose] = useState(false);
+
+  const handleModalClose = () => {
+    setClose(true);
+  };
+
+  const handleConfirm = () => {
+    onConfirm();
+    handleModalClose();
+  };
+
+  const handleAnimationEnd = () => {
+    if (close) {
+      onClose();
+    }
+  };
   const handleClickSubmit = (e) => {
     e.preventDefault();
     const urlFormInput = new FormData(e.target);
@@ -13,16 +41,23 @@ const UrlFormContent = ({ linkData }) => {
 
   return (
     <form onSubmit={handleClickSubmit}>
-      <h3>
+      <StyledTitle>
         <FaLink />
-        {linkData.length ? "링크 수정" : "링크 추가"}
-      </h3>
+        <span> {linkData ? "링크 수정" : "링크 추가"}</span>
+      </StyledTitle>
       <FormInput name="link" label="링크" />
       <FormInput name="title" label="제목" />
-      <FormInput name="memo" label="메모" height={10} />
+      <FormInput name="memo" label="메모" height="50px" />
       {/* 카테고리 */}
       {/* 태그 */}
-      <button>Submit</button>
+      <div className="button-group">
+        <Button color="gray" onClick={handleModalClose}>
+          CANCEL
+        </Button>
+        <Button color="skyblue" onClick={handleConfirm}>
+          SUBMIT
+        </Button>
+      </div>
     </form>
   );
 };

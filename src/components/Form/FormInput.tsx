@@ -9,7 +9,7 @@ const StyledFormInput = styled.input<{ height: string }>`
   height: ${({ height }) => height};
 `;
 
-const FormInput = ({ height = 5, label, ...props }) => {
+const FormInput = ({ height = "20px", label, ...props }) => {
   return (
     <>
       <p>{label}</p>
