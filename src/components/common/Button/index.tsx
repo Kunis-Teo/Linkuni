@@ -2,8 +2,8 @@ import { ButtonHTMLAttributes } from "react";
 import styled from "styled-components";
 
 type TProps = {
-    color: string;
-    children: React.ReactNode;
+  color: string;
+  children: React.ReactNode;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const StyledButton = styled.button<{ color: string }>`
@@ -26,11 +26,11 @@ const StyledButton = styled.button<{ color: string }>`
 `;
 
 const Button = ({ color = "white", children, ...restProps }: TProps) => {
-    return (
-        <StyledButton {...restProps} color={color}>
-        {children}
-        </StyledButton>
-);
+  return (
+    <StyledButton {...restProps} color={color}>
+      {children}
+    </StyledButton>
+  );
 };
 
 export default Button;

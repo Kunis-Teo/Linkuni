@@ -48,10 +48,10 @@ export const StyledMask = styled.div<{ close: boolean }>`
 
   ${({ close }) => {
     return css`
-       opacity: ${close ? 0 : 1}; 
+      opacity: ${close ? 0 : 1};
       animation: ${close ? keyframeFadeOut : keyframeFadeIn} 0.25s;
     `;
-}}
+  }}
 `;
 
 export const StyledModalWrapper = styled.div<{ close: boolean }>`
@@ -59,11 +59,11 @@ export const StyledModalWrapper = styled.div<{ close: boolean }>`
     return css`
       animation: ${close ? keyframeSlideDown : keyframeSlideUp} 0.25s;
     `;
-}}
+  }}
   background: whitesmoke;
   border-radius: 10px;
   position: relative;
-  height: 200px;
+  height: 420px;
   width: 300px;
   padding: 15px;
   display: flex;
