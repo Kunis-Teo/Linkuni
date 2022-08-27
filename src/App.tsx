@@ -1,12 +1,17 @@
 import React from "react";
 
+import Header from "@/components/Header/Header";
 import SearchPage from "@/components/SearchPage/SearchPage";
-import { Wrapper } from "./App.styled";
+import { Wrapper, SearchPageWrapper } from "./App.styled";
 
 function App() {
   return (
     <Wrapper>
-      <SearchPage />
+      <Header />
+      <SearchPageWrapper>
+        <img src="kangaroo.png" />
+        <SearchPage />
+      </SearchPageWrapper>
     </Wrapper>
   );
 }
