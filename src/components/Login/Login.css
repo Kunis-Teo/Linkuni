@@ -8,7 +8,7 @@ body {
   font-size: 15px;
   line-height: 1.7;
   color: black;
-  background-color: #e9e4d4;
+  background-color: #fffffe;
   overflow-x: hidden;
 }
 a {
@@ -110,12 +110,13 @@ h6 span {
 .card-back {
   width: 100%;
   height: 100%;
-  background-color: whitesmoke;
+  background-color: #fffffe;
   /* background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg"); */
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 300%;
   position: absolute;
+  border: solid;
   border-radius: 6px;
   left: 0;
   top: 0;
@@ -255,7 +256,7 @@ h6 span {
   -ms-flex-pack: center;
   text-align: center;
   border: none;
-  background-color: #ffeba7;
+  background-color: rgb(255, 221, 0);
   color: #102770;
   box-shadow: 0 8px 24px 0 rgba(255, 235, 167, 0.2);
 }
