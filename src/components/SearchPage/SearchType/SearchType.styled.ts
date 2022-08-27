@@ -9,8 +9,10 @@ const borderColor = "black";
 export const Wrapper = styled.div`
   position: relative;
   display: flex;
-  width: 600px;
+  width: 100%;
+  max-width: 200px;
   border: 1px solid ${borderColor};
+  margin: 20px 0;
 
   ${borderRadius}
 `;
