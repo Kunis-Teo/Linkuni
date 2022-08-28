@@ -1,14 +1,12 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const StyledWrapper = styled.div`
-  ${({ isWatched }: { isWatched: boolean }) => {
-    return (
-      isWatched &&
-      css`
+  ${({ isWatched }: { isWatched: boolean }) => (
+    isWatched
+      && css`
         opacity: 0.5;
       `
-    );
-  }}
+  )}
 
   flex: 0 0 auto;
   width: 210px;

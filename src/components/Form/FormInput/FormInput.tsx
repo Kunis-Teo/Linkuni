@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import { StyledFormInput } from "./FormInput.styled";
+import { StyledFormInput } from './FormInput.styled';
 
-function FormInput({ height = "20px", label, ...props }) {
+function FormInput({ height = '20px', label, ...props }) {
   return (
     <>
       <p>{label}</p>

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { AiOutlineSearch } from "react-icons/ai";
+import styled from 'styled-components';
+import { AiOutlineSearch } from 'react-icons/ai';
 
 export const Wrapper = styled.div`
   display: flex;

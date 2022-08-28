@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { FaPaperclip } from "react-icons/fa";
-import Button from "@/components/common/Button";
-import Selector, { DEFAULT_OPTIONS } from "@/components/Selector";
-import FormInput from "@/components/Form/FormInput/FormInput";
+import React, { useState } from 'react';
+import { FaPaperclip } from 'react-icons/fa';
+import Button from '@/components/common/Button';
+import Selector, { DEFAULT_OPTIONS } from '@/components/Selector';
+import FormInput from '@/components/Form/FormInput/FormInput';
 import {
   StyledMask,
   StyledTitle,
   StyledModalWrapper,
-} from "./UrlFormContent.styled";
+} from './UrlFormContent.styled';
 
 type UrlFormProps = {
   linkData?: string | null;
@@ -47,7 +47,10 @@ function UrlFormContent({ linkData, onConfirm, onClose }: UrlFormProps) {
         <form onSubmit={handleClickSubmit}>
           <StyledTitle>
             <FaPaperclip />
-            <span> {linkData ? "링크 수정" : "링크 추가"}</span>
+            <span>
+              {' '}
+              {linkData ? '링크 수정' : '링크 추가'}
+            </span>
           </StyledTitle>
           <FormInput name="link" label="링크" />
           <FormInput name="title" label="제목" />

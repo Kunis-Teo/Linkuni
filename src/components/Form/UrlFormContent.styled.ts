@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css, keyframes } from 'styled-components';
 
 export const StyledTitle = styled.div`
   margin-top: 10px;
@@ -54,20 +54,16 @@ export const StyledMask = styled.div<{ close: boolean }>`
   align-items: center;
   background: rgba(0, 0, 0, 0.6);
 
-  ${({ close }) => {
-    return css`
+  ${({ close }) => css`
       opacity: ${close ? 0 : 1};
       animation: ${close ? keyframeFadeOut : keyframeFadeIn} 0.25s;
-    `;
-  }}
+    `}
 `;
 
 export const StyledModalWrapper = styled.div<{ close: boolean }>`
-  ${({ close }) => {
-    return css`
+  ${({ close }) => css`
       animation: ${close ? keyframeSlideDown : keyframeSlideUp} 0.25s;
-    `;
-  }}
+    `}
   background: whitesmoke;
   border-radius: 10px;
   position: relative;

@@ -4,28 +4,27 @@ import { RiDeleteBinLine } from 'react-icons/ri';
 import { ContentsContainer } from './Contents_new.styled';
 import Modal from './Modal';
 
-const Contents = () => {
+function Contents() {
   const [open, setOpen] = useState(false);
 
   return (
-    <ContentsContainer>      
-      <div className='title'>
-        <div>
-          <input className='categoryName' type='text' value='프론트엔드' readOnly/>
+    <ContentsContainer>
+      <div className="contents-header">
+        <div className="title">
+          <input className="category-name" type="text" value="프론트엔드" readOnly />
           <span>(21)</span>
         </div>
-        <div className='icons'>
-          <MdOutlineModeEditOutline 
-            className='edit'
-            onClick={() => setOpen(prev => !prev)}
+        <div className="icons">
+          <MdOutlineModeEditOutline
+            className="edit"
+            onClick={() => setOpen((prev) => !prev)}
           />
-          <RiDeleteBinLine className='delete'/>
+          {open && <Modal />}
+          <RiDeleteBinLine className="delete" />
         </div>
-      </div>   
-      {open && <Modal/>}
+      </div>
     </ContentsContainer>
   );
-};
-
+}
 
 export default Contents;

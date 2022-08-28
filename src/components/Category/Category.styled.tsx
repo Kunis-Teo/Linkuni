@@ -1,52 +1,52 @@
-import styled  from 'styled-components';
+import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   left: 0;
 
   display: flex;
-  justify-content: center;
+	justify-content: center;
 
-  width: 30%;
-  height: 100vh;
+	width: 130px;
+	height: 100vh;
 
-  background-color: #F6BC4B;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+	z-index: 100;
+	background-color: #f6bc4b;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
-  transform: ${(props) =>
-    props.open ? "translateX(0px)" : "translateX(-130px)"};
-  
-  transition: transform 0.2s linear;
+	transform: ${({ open }: { open: boolean }) => (open ? 'translateX(-130px)' : 'translateX(0px)')};
 
-  .ul {
-    margin-top: 160px;
-    font-weight: 900;    
-  };
+	transition: transform 0.2s linear;
 
-  .list{
-    font-size: 12px;
-    margin-bottom: 8px;
-  };
+	.ul {
+		margin-top: 160px;
+		font-weight: 900;
+	}
 
-  .bookmark-button {
-    position: absolute;
-    top: 140px;
-    left: 100%;
+	.list {
+		font-size: 12px;
+		margin-bottom: 8px;
+	}
 
-    width: 35px;
-    height: 70px;
-    
-    border-radius: 0 10px 10px 0;
-    border: 0;
-    
-    background-color: #F6BC4B;
-    text-align: center;
-    line-height: 80px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  };
+	.bookmark-button {
+		position: absolute;
+		top: 140px;
+		left: 100%;
 
-  .bookmark-button .mobile-bookmark {
-    color: white;
-    font-size: 18px;
-  }
+		width: 35px;
+		height: 70px;
+
+		border-radius: 0 10px 10px 0;
+		border: 0;
+
+		background-color: #f6bc4b;
+		text-align: center;
+		line-height: 80px;
+		box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+	}
+
+	.bookmark-button .mobile-bookmark {
+		color: white;
+		font-size: 18px;
+	}
 `;

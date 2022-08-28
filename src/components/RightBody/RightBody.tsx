@@ -1,15 +1,11 @@
-import React, { useCallback } from "react";
-
-import Header from "@/components/Header/Header";
-import SearchPage from "@/components/SearchPage/SearchPage";
-import Tag from "@/components/Tag/Tag";
-import { SearchPageWrapper, AddButton } from "./RightBody.styled";
+import React from 'react';
+import LinkForm from '@/components/LinkForm';
+import Header from '@/components/Header/Header';
+import SearchPage from '@/components/SearchPage/SearchPage';
+import Tag from '@/components/Tag/Tag';
+import { SearchPageWrapper } from './RightBody.styled';
 
 function RightBody() {
-  const handleAddButtonClick = useCallback(() => {
-    console.log("click");
-  }, []);
-
   return (
     <>
       <Header />
@@ -17,13 +13,11 @@ function RightBody() {
         <img src="kangaroo.png" />
         <SearchPage />
         <Tag
-          onClick={(e) =>
-            console.log(e.currentTarget.textContent.split(" ")[1])
-          }
+          onClick={(e) => console.log(e.currentTarget.textContent.split(' ')[1])}
         >
           React
         </Tag>
-        <AddButton src="addbtn.png" onClick={handleAddButtonClick} />
+        <LinkForm linkData={null} />
       </SearchPageWrapper>
     </>
   );
