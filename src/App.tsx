@@ -1,10 +1,13 @@
-import React from 'react';
+import React from "react";
+
+import RightBody from "@/components/RightBody/RightBody";
+import { Wrapper } from "./App.styled";
 
 function App() {
   return (
-    <div>
-      asdf
-    </div>
+    <Wrapper>
+      <RightBody />
+    </Wrapper>
   );
 }
 
