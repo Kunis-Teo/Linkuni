@@ -146,6 +146,17 @@ table {
   border-spacing: 0;
 }
 
+button {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: inherit;
+  cursor: pointer;
+  padding: 0;
+  overflow: visible;
+}
+
 #root {
   display: flex;
   justify-content: center;

@@ -1,4 +1,5 @@
 import RightBody from "@/components/RightBody/RightBody";
+import LinkForm from "@/components/LinkForm/index";
 import { Wrapper } from "./App.styled";
 import UrlCardList from "./components/UrlCardList/UrlCardList";
 
@@ -98,6 +99,7 @@ function App() {
       <RightBody />
       <UrlCardList categoryTitle="프론트엔드" cards={mockCardData} />
       <UrlCardList categoryTitle="{categoryTitle}" cards={mockCardData} />
+      <LinkForm linkData={null} />
     </Wrapper>
   );
 }
