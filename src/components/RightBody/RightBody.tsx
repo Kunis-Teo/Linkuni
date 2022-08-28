@@ -1,15 +1,11 @@
-import React, { useCallback } from "react";
+import React from 'react';
 
-import Header from "@/components/Header/Header";
-import SearchPage from "@/components/SearchPage/SearchPage";
-import TagList from "@/domains/tag/List";
-import { SearchPageWrapper, AddButton } from "./RightBody.styled";
+import Header from '@/components/Header/Header';
+import SearchPage from '@/components/SearchPage/SearchPage';
+import TagList from '@/domains/tag/List';
+import { SearchPageWrapper, AddButton } from './RightBody.styled';
 
 function RightBody() {
-  const handleAddButtonClick = useCallback(() => {
-    console.log("click");
-  }, []);
-
   return (
     <>
       <Header />
@@ -17,7 +13,7 @@ function RightBody() {
         <img src="kangaroo.png" />
         <SearchPage />
         <TagList />
-        <AddButton src="addbtn.png" onClick={handleAddButtonClick} />
+        <AddButton src="addbtn.png" />
       </SearchPageWrapper>
     </>
   );

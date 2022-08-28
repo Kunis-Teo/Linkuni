@@ -1,10 +1,10 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 const borderRadius = css`
   border-radius: 100px;
 `;
 
-const borderColor = "black";
+const borderColor = 'black';
 
 export const Wrapper = styled.div`
   position: relative;
@@ -27,7 +27,7 @@ export const Option = styled.div<OptionProps>`
   align-items: center;
   flex: 1;
   margin: 0 10px;
-  color: ${(props) => (props.isSelected ? "white" : "black")};
+  color: ${(props) => (props.isSelected ? 'white' : 'black')};
   z-index: 10;
   transition: color 0.5s;
   font-weight: bold;
@@ -44,8 +44,7 @@ export const Selector = styled.div<SelectorProps>`
   height: 100%;
   background-color: ${borderColor};
   content: none;
-  left: ${(props) =>
-    props.selectedIndex * Math.floor(100 / props.totalLength)}%;
+  left: ${(props) => props.selectedIndex * Math.floor(100 / props.totalLength)}%;
   transition: left 0.5s;
   z-index: -1;
 

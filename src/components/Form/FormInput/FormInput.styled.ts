@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledFormInput = styled.input<{ height: string }>`
   border-radius: 5px;
