@@ -1,14 +1,5 @@
-import styled from "styled-components";
-
-const StyledTag = styled.button`
-  padding: 4px 8px;
-  background-color: #ebedf0;
-  border-radius: 20px;
-
-  &:hover {
-    background-color: #ebedf090;
-  }
-`;
+import React from "react";
+import { StyledTag } from "./Tag.styled";
 
 type Props = {
   children: string;
@@ -17,10 +8,10 @@ type Props = {
 /**
  *  @usage onClick={(e) => e.currentTarget.textContent.split(" ")[1]}
  */
-const Tag = (props: Props) => {
+function Tag(props: Props) {
   const { children, onClick } = props;
 
   return <StyledTag onClick={onClick}># {children}</StyledTag>;
-};
+}
 
 export default Tag;
