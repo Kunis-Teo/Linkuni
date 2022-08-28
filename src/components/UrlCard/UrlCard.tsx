@@ -1,9 +1,10 @@
-import LikeIcon from "./LikeIcon";
-import PencilIcon from "./PencilIcon";
-import DeleteIcon from "./DeleteIcon";
-import { StyledWrapper } from "./UrlCard.styled";
 import React from "react";
+
 import { URL } from "@/types";
+import LikeIcon from "@/components/UrlCard/LikeIcon";
+import PencilIcon from "@/components/UrlCard/PencilIcon";
+import DeleteIcon from "@/components/UrlCard/DeleteIcon";
+import { StyledWrapper } from "./UrlCard.styled";
 
 interface Props extends URL {}
 
