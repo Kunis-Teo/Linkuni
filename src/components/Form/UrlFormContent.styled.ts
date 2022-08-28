@@ -16,6 +16,7 @@ export const keyframeSlideUp = keyframes`
     transform: translateY(0px);
   }
 `;
+
 export const keyframeSlideDown = keyframes`
   from {
     transform: translateY(0px);
@@ -54,20 +55,16 @@ export const StyledMask = styled.div<{ close: boolean }>`
   align-items: center;
   background: rgba(0, 0, 0, 0.6);
 
-  ${({ close }) => {
-    return css`
-      opacity: ${close ? 0 : 1};
-      animation: ${close ? keyframeFadeOut : keyframeFadeIn} 0.25s;
-    `;
-  }}
+  ${({ close }) => css`
+    opacity: ${close ? 0 : 1};
+    animation: ${close ? keyframeFadeOut : keyframeFadeIn} 0.25s;
+  `}
 `;
 
 export const StyledModalWrapper = styled.div<{ close: boolean }>`
-  ${({ close }) => {
-    return css`
-      animation: ${close ? keyframeSlideDown : keyframeSlideUp} 0.25s;
-    `;
-  }}
+  ${({ close }) => css`
+    animation: ${close ? keyframeSlideDown : keyframeSlideUp} 0.25s;
+  `}
   background: whitesmoke;
   border-radius: 10px;
   position: relative;
