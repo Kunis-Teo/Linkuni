@@ -15,7 +15,7 @@ type UrlFormProps = {
   onClose: () => void;
 };
 
-const UrlFormContent = ({ linkData, onConfirm, onClose }: UrlFormProps) => {
+function UrlFormContent({ linkData, onConfirm, onClose }: UrlFormProps) {
   const [close, setClose] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState([]);
   const [selectedTag, setSelectedTag] = useState([]);
@@ -53,14 +53,14 @@ const UrlFormContent = ({ linkData, onConfirm, onClose }: UrlFormProps) => {
           <FormInput name="title" label="제목" />
           {/* 카테고리 */}
           <Selector
-            title={"카테고리"}
+            title="카테고리"
             options={DEFAULT_OPTIONS}
             selected={selectedCategory}
             setSelected={setSelectedCategory}
           />
           {/* 태그 */}
           <Selector
-            title={"태그"}
+            title="태그"
             options={DEFAULT_OPTIONS}
             selected={selectedTag}
             setSelected={setSelectedTag}
@@ -79,6 +79,6 @@ const UrlFormContent = ({ linkData, onConfirm, onClose }: UrlFormProps) => {
       </StyledModalWrapper>
     </StyledMask>
   );
-};
+}
 
 export default UrlFormContent;

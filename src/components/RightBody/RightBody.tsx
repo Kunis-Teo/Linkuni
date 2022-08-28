@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 
 import Header from "@/components/Header/Header";
 import SearchPage from "@/components/SearchPage/SearchPage";
-import Tag from "@/components/Tag";
+import Tag from "@/components/Tag/Tag";
 import { SearchPageWrapper, AddButton } from "./RightBody.styled";
 
 function RightBody() {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 interface Props {
@@ -6,11 +6,12 @@ interface Props {
   cardId: number;
 }
 
-const LikeIcon = ({ isStared, cardId }: Props) => {
+function LikeIcon({ isStared, cardId }: Props) {
   const [state, setState] = useState<boolean>(isStared);
 
   const handleIconClick = () => {
     setState((prev) => !prev);
+    console.log(cardId);
   };
 
   return (
@@ -18,6 +19,6 @@ const LikeIcon = ({ isStared, cardId }: Props) => {
       {state ? <AiFillHeart /> : <AiOutlineHeart />}
     </div>
   );
-};
+}
 
 export default LikeIcon;

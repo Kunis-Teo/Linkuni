@@ -1,3 +1,4 @@
+import React from "react";
 import { URL } from "@/types";
 import UrlCard from "@/components/UrlCard/UrlCard";
 
@@ -8,7 +9,7 @@ interface Props {
   categoryTitle: string;
 }
 
-const UrlCardList = ({ cards, categoryTitle }: Props) => {
+function UrlCardList({ cards, categoryTitle }: Props) {
   return (
     <StyledWrapper>
       <h2 className="section-title">{categoryTitle}</h2>
@@ -19,6 +20,6 @@ const UrlCardList = ({ cards, categoryTitle }: Props) => {
       </ul>
     </StyledWrapper>
   );
-};
+}
 
 export default UrlCardList;

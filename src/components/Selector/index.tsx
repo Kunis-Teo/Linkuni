@@ -3,6 +3,7 @@ import { MultiSelect } from "react-multi-select-component";
 
 import "./Selector.css";
 
+/*
 interface IOPTION {
   label: string;
   apple: string;
@@ -15,6 +16,7 @@ type TProps = {
   selected: string;
   setSelected: void;
 };
+*/
 
 export const DEFAULT_OPTIONS = [
   { label: "#공부", value: "study" },
@@ -35,16 +37,16 @@ const LOCALIZAION = {
   create: "Create",
 };
 
-/**************************************************************
+/** ************************************************************
  *  다중요소를 선택하는 컴포넌트
- **************************************************************/
-const Selector = ({ title, options, selected, setSelected }) => {
+ ************************************************************* */
+function Selector({ title, options, selected, setSelected }) {
   // @ts-ignore
   return (
     <div>
       <div>
         <p>{title}</p>
-        {/*<pre>{JSON.stringify(selected)}</pre>*/}
+        {/* <pre>{JSON.stringify(selected)}</pre> */}
         <MultiSelect
           options={options}
           value={selected}
@@ -55,6 +57,6 @@ const Selector = ({ title, options, selected, setSelected }) => {
       </div>
     </div>
   );
-};
+}
 
 export default Selector;

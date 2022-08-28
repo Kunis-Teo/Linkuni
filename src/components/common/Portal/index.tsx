@@ -6,7 +6,7 @@ type TProps = {
   children: React.ReactNode;
 };
 
-const Portal = ({ id, children }: TProps) => {
+function Portal({ id, children }: TProps) {
   const portalDOMRef = useRef<HTMLDivElement | null>(null);
   const [isPortalMounted, setIsPortalMounted] = useState(false);
   // 동적으로 노드 생성
@@ -28,6 +28,6 @@ const Portal = ({ id, children }: TProps) => {
   if (!isPortalMounted) return null;
   // 포탈 생성
   return createPortal(children, portalDOMRef.current!);
-};
+}
 
 export default Portal;

@@ -1,3 +1,4 @@
+import React from "react";
 import RightBody from "@/components/RightBody/RightBody";
 import LinkForm from "@/components/LinkForm/index";
 import UrlCardList from "@/components/UrlCardList/UrlCardList";

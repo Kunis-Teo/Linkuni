@@ -7,6 +7,7 @@ export const StyledButton = styled.button`
   padding: 7px 10px;
   border-radius: 50%;
   color: #fff;
+
   &:hover {
     box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
     scale: 1.01;

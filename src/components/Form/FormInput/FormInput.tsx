@@ -2,7 +2,7 @@ import React from "react";
 
 import { StyledFormInput } from "./FormInput.styled";
 
-const FormInput = ({ height = "20px", label, ...props }) => {
+function FormInput({ height = "20px", label, ...props }) {
   return (
     <>
       <p>{label}</p>
@@ -14,6 +14,6 @@ const FormInput = ({ height = "20px", label, ...props }) => {
       />
     </>
   );
-};
+}
 
 export default FormInput;

@@ -1,11 +1,12 @@
+import React from "react";
 import { AiFillDelete } from "react-icons/ai";
 
 // 삭제하시겠습니까 ?
-const Delete = () => {
+function Delete() {
   return (
     <div>
       <AiFillDelete />
     </div>
   );
-};
+}
 export default Delete;

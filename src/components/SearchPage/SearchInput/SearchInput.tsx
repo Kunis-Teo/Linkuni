@@ -12,14 +12,14 @@ function SearchInput({ onSubmit }: SearchInputProps) {
   const onEnterKeyDown = useCallback(
     (e) => {
       if (e.key === "Enter") {
-        onSubmit && onSubmit(inputRef.current.value);
+        if (onSubmit) onSubmit(inputRef.current.value);
       }
     },
     [onSubmit]
   );
 
   const onIconClick = useCallback(() => {
-    onSubmit && onSubmit(inputRef.current.value);
+    if (onSubmit) onSubmit(inputRef.current.value);
   }, [onSubmit]);
 
   return (

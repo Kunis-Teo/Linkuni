@@ -8,7 +8,7 @@ import { StyledWrapper } from "./UrlCard.styled";
 
 interface Props extends URL {}
 
-const UrlCard = ({
+function UrlCard({
   url,
   imageUrl,
   isStarred,
@@ -16,7 +16,7 @@ const UrlCard = ({
   tags,
   title,
   id,
-}: Props) => {
+}: Props) {
   const handleUrlCardClick = () => {
     window.open(url);
   };
@@ -30,8 +30,8 @@ const UrlCard = ({
       <div className="card-body">
         <h1 className="body-title">{title}</h1>
         <h3 className="body-tag">
-          {tags.map((tag, index) => (
-            <React.Fragment key={index}>{tag.name}</React.Fragment>
+          {tags.map((tag) => (
+            <React.Fragment key={`key-${tag.id}`}>{tag.name}</React.Fragment>
           ))}
         </h3>
       </div>
@@ -49,6 +49,6 @@ const UrlCard = ({
       </div>
     </StyledWrapper>
   );
-};
+}
 
 export default UrlCard;

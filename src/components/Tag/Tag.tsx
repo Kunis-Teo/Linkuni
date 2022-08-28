@@ -1,3 +1,4 @@
+import React from "react";
 import { StyledTag } from "./Tag.styled";
 
 type Props = {
@@ -7,10 +8,10 @@ type Props = {
 /**
  *  @usage onClick={(e) => e.currentTarget.textContent.split(" ")[1]}
  */
-const Tag = (props: Props) => {
+function Tag(props: Props) {
   const { children, onClick } = props;
 
   return <StyledTag onClick={onClick}># {children}</StyledTag>;
-};
+}
 
 export default Tag;

@@ -6,7 +6,7 @@ import UrlFormContent from "@/components/Form/UrlFormContent";
 import { StyledButton } from "./LinkForm.styled";
 
 // props: linkData from linkCard
-const LinkForm = ({ linkData }) => {
+function LinkForm({ linkData }) {
   const [visible, setVisible] = useState(false);
   const handleModalOpen = () => setVisible(true);
   const handleModalClose = () => setVisible(false);
@@ -22,7 +22,7 @@ const LinkForm = ({ linkData }) => {
       });
       return res;
     } catch (err) {
-      console.log(err);
+      return console.log(err);
     }
   };
   // const getCategoryList =
@@ -56,6 +56,6 @@ const LinkForm = ({ linkData }) => {
       )}
     </>
   );
-};
+}
 
 export default LinkForm;
