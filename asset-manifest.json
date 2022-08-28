@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/kunis-teo.github.io/linkuni/static/css/main.02bed038.css",
-    "main.js": "/kunis-teo.github.io/linkuni/static/js/main.54b5fb97.js",
-    "index.html": "/kunis-teo.github.io/linkuni/index.html",
-    "main.02bed038.css.map": "/kunis-teo.github.io/linkuni/static/css/main.02bed038.css.map",
-    "main.54b5fb97.js.map": "/kunis-teo.github.io/linkuni/static/js/main.54b5fb97.js.map"
+    "main.css": "/linkuni/static/css/main.02bed038.css",
+    "main.js": "/linkuni/static/js/main.6b7d1540.js",
+    "index.html": "/linkuni/index.html",
+    "main.02bed038.css.map": "/linkuni/static/css/main.02bed038.css.map",
+    "main.6b7d1540.js.map": "/linkuni/static/js/main.6b7d1540.js.map"
   },
   "entrypoints": [
     "static/css/main.02bed038.css",
-    "static/js/main.54b5fb97.js"
+    "static/js/main.6b7d1540.js"
   ]
 }
