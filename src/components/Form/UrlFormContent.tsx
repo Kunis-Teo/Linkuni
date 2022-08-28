@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { FaPaperclip } from "react-icons/fa";
 import Button from "@/components/common/Button";
-import {
-  StyledMask,
-  StyledModalWrapper,
-} from "@/components/LinkForm/form.styled";
 import Selector, { DEFAULT_OPTIONS } from "@/components/Selector";
 import FormInput from "@/components/Form/FormInput/FormInput";
-import { StyledTitle } from "./UrlFormContent.styled";
+import {
+  StyledMask,
+  StyledTitle,
+  StyledModalWrapper,
+} from "./UrlFormContent.styled";
 
 type UrlFormProps = {
   linkData?: string | null;
