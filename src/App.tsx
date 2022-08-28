@@ -9,15 +9,15 @@ import { mockCardData } from './mocks/mockCardData';
 import { Wrapper } from './App.styled';
 
 function App() {
-	return (
-		<Wrapper>
-			<Category />
-			<RightBody />
-			<UrlCardList categoryTitle="프론트엔드" cards={mockCardData} />
-			<UrlCardList categoryTitle="{categoryTitle}" cards={mockCardData} />
-			<Contents />
-		</Wrapper>
-	);
+  return (
+    <Wrapper>
+      <Category />
+      <RightBody />
+      <UrlCardList categoryTitle="프론트엔드" cards={mockCardData} />
+      <UrlCardList categoryTitle="{categoryTitle}" cards={mockCardData} />
+      <Contents />
+    </Wrapper>
+  );
 }
 
 export default App;

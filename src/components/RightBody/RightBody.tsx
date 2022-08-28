@@ -1,9 +1,9 @@
 import React from 'react';
-import LinkForm from '@/components/LinkForm';
+
 import Header from '@/components/Header/Header';
 import SearchPage from '@/components/SearchPage/SearchPage';
-import Tag from '@/components/Tag/Tag';
-import { SearchPageWrapper } from './RightBody.styled';
+import TagList from '@/domains/tag/List';
+import { SearchPageWrapper, AddButton } from './RightBody.styled';
 
 function RightBody() {
   return (
@@ -12,12 +12,8 @@ function RightBody() {
       <SearchPageWrapper>
         <img src="kangaroo.png" />
         <SearchPage />
-        <Tag
-          onClick={(e) => console.log(e.currentTarget.textContent.split(' ')[1])}
-        >
-          React
-        </Tag>
-        <LinkForm linkData={null} />
+        <TagList />
+        <AddButton src="addbtn.png" />
       </SearchPageWrapper>
     </>
   );

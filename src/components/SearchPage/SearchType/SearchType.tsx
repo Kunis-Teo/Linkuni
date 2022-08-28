@@ -18,14 +18,18 @@ const SearchType = forwardRef<string, SearchTypeProps>(
 
     useImperativeHandle(ref, () => selections[selectedIndex]);
 
-    const Options = useMemo(() => selections.map((selection, i) => (
-      <Option
-        isSelected={selectedIndex === i}
-        onClick={() => setSelectedIndex(i)}
-      >
-        {selection}
-      </Option>
-    )), [selectedIndex, selections]);
+    const Options = useMemo(
+      () =>
+        selections.map((selection, i) => (
+          <Option
+						isSelected={selectedIndex === i}
+						onClick={() => setSelectedIndex(i)}
+					>
+            {selection}
+          </Option>
+        )),
+      [selectedIndex, selections]
+    );
 
     return (
       <Wrapper>
@@ -33,7 +37,7 @@ const SearchType = forwardRef<string, SearchTypeProps>(
         <Selector selectedIndex={selectedIndex} totalLength={totalLength} />
       </Wrapper>
     );
-  },
+  }
 );
 
 export default SearchType;
