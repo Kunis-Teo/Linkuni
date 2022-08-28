@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 
 import Header from "@/components/Header/Header";
 import SearchPage from "@/components/SearchPage/SearchPage";
-import Tag from "@/components/Tag";
+import TagList from "@/domains/tag/List";
 import { SearchPageWrapper, AddButton } from "./RightBody.styled";
 
 function RightBody() {
@@ -16,13 +16,7 @@ function RightBody() {
       <SearchPageWrapper>
         <img src="kangaroo.png" />
         <SearchPage />
-        <Tag
-          onClick={(e) =>
-            console.log(e.currentTarget.textContent.split(" ")[1])
-          }
-        >
-          React
-        </Tag>
+        <TagList />
         <AddButton src="addbtn.png" onClick={handleAddButtonClick} />
       </SearchPageWrapper>
     </>
