@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {BsPinFill, BsPin} from 'react-icons/bs';
-import { PinIconWrapper } from './Category.styled';
+import { PinIconWrapper } from './PinIcon.styled';
 
 const PinIcon = ({isPined}) => {
   const [state, setState] = useState(isPined);

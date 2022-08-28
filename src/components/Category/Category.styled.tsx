@@ -1,73 +1,52 @@
-import styled from 'styled-components';
+import styled  from 'styled-components';
 
-export const Container = styled.nav`  
-  position: fixed;
+export const StyledWrapper = styled.div`
+  position: absolute;
   left: 0;
-  top: 0;  
 
-  width: 30%;  
-  max-width: 330px;
+  display: flex;
+  justify-content: center;
+
+  width: 30%;
   height: 100vh;
+
   background-color: #F6BC4B;
-  
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
-  .bookmark{
-    width: 330px;
-    font-size: 50px;
-    color: #fff;
-    padding-top: 250px; 
-    text-align: center;   
+  transform: ${(props) =>
+    props.open ? "translateX(0px)" : "translateX(-130px)"};
+  
+  transition: transform 0.2s linear;
+
+  .ul {
+    margin-top: 160px;
+    font-weight: 900;    
   };
 
-  .ul{
-    padding: 30px 80px;
-  }
-  .list {
-    list-style: none;
-    font-weight: bold;
-    color: #444444;
-    font-size: 16px;
-    padding: 10px;
-    cursor: pointer;      
+  .list{
+    font-size: 12px;
+    margin-bottom: 8px;
   };
-`;
 
-export const PinIconWrapper = styled.div`
-  display: inline-block;
-  padding: 5px;
-`;
+  .bookmark-button {
+    position: absolute;
+    top: 140px;
+    left: 100%;
 
-export const ContentsContainer = styled.div`
-  position: absolute;  
-  top: 0px;
-  left: 330px;
-  
-  width: 70%;
-  // 영역 크기 안잡힘
-  height: 100vh;
-  
-  .title{
-    width: 100%;
+    width: 35px;
+    height: 70px;
     
-    padding: 150px 0 0 80px;
-    display: flex;
-    justify-content: space-between;
+    border-radius: 0 10px 10px 0;
+    border: 0;
+    
+    background-color: #F6BC4B;
+    text-align: center;
+    line-height: 80px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  };
 
-    h2{
-      font-size: 28px;
-      font-weight: 900;
-    };
-    
-    .icons{
-      font-size: 30px;
-      cursor: pointer;
-    }
-    .icons .delete{
-      margin-left: 10px;
-    }
-    
+  .bookmark-button .mobile-bookmark {
+    color: white;
+    font-size: 18px;
   }
-  
-  
 `;
-
