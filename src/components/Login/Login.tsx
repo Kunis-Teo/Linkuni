@@ -1,7 +1,85 @@
-import React from "react";
+import React, { useCallback } from "react";
 import "./Login.css";
+import axios from "axios";
+/* eslint no-restricted-globals: ["off"] */
 
 function App() {
+  // const handleAddButtonClick = useCallback(() => {
+  //   console.log("click");
+  // }, []);
+
+  const enterkey = useCallback(() => {
+    //@ts-ignore
+    if (window.event.keyCode === 13) {
+      postSignup();
+    }
+  }, []);
+
+  const postSignup = useCallback(() => {
+    //@ts-ignore
+    const signupId = document.querySelector("#logemail2").value;
+    //@ts-ignore
+    const signupPassword = document.querySelector("#logpass2").value;
+    if (signupId.length === 0) {
+      alert("ID를 입력해주세요");
+    } else if (signupPassword.length === 0) {
+      alert("Password를 입력해주세요");
+    } else {
+      axios
+        .post(
+          "http://3.38.1.118:8080/auth/signup",
+          {
+            name: signupId,
+            password: signupPassword,
+          },
+          {
+            withCredentials: true, // 쿠키 cors 통신 설정
+          }
+        )
+        .then(function (response) {
+          alert("회원가입이 완료되었습니다");
+          location.reload(); //여기에 로그인페이지로 이동
+          //@ts-ignore
+          document.querySelector("#logemail2").value = "";
+          //@ts-ignore
+          document.querySelector("#logpass2").value = "";
+          console.log(response);
+          console.log(response.data);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+  }, []);
+
+  const postLogin = useCallback(() => {
+    //@ts-ignore
+    const loginId = document.querySelector("#logemail1").value;
+    //console.log(loginId);
+    //@ts-ignore
+    const loginPassword = document.querySelector("#logpass1").value;
+    //console.log(loginPassword);
+    axios
+      .post(
+        "http://3.38.1.118:8080/auth/signin",
+        {
+          name: loginId,
+          password: loginPassword,
+        },
+        {
+          withCredentials: true, // 쿠키 cors 통신 설정
+        }
+      )
+      .then(function (response) {
+        alert("메인페이지로 이동");
+        //console.log(response);
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <div className="section">
       <div className="container">
@@ -31,7 +109,7 @@ function App() {
                             name="logemail"
                             className="form-style"
                             placeholder="Your id"
-                            id="logemail"
+                            id="logemail1"
                           />
                           <i className="input-icon uil uil-at"></i>
                         </div>
@@ -41,13 +119,13 @@ function App() {
                             name="logpass"
                             className="form-style"
                             placeholder="Your Password"
-                            id="logpass"
+                            id="logpass1"
                           />
                           <i className="input-icon uil uil-lock-alt"></i>
                         </div>
-                        <a href="#" className="btn mt-4">
+                        <button onClick={postLogin} className="btn mt-4">
                           submit
-                        </a>
+                        </button>
                         <p className="mb-0 mt-4 text-center"></p>
                       </div>
                     </div>
@@ -62,7 +140,7 @@ function App() {
                             name="logemail"
                             className="form-style"
                             placeholder="Enter your id"
-                            id="logemail"
+                            id="logemail2"
                           />
                           <i className="input-icon uil uil-at"></i>
                         </div>
@@ -72,13 +150,14 @@ function App() {
                             name="logpass"
                             className="form-style"
                             placeholder="Enter your Password"
-                            id="logpass"
+                            id="logpass2"
+                            onKeyUp={enterkey}
                           />
                           <i className="input-icon uil uil-lock-alt"></i>
                         </div>
-                        <a href="#" className="btn mt-4">
+                        <button onClick={postSignup} className="btn mt-4">
                           submit
-                        </a>
+                        </button>
                       </div>
                     </div>
                   </div>
