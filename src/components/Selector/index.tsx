@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { MultiSelect } from "react-multi-select-component";
+import '@/components/Selector/Selector.css';
 
 
 
@@ -30,7 +31,7 @@ const LOCALIZAION ={
     "noOptions": "No options",
     "search": "검색",
     "selectAll": "모두 선택",
-    "selectAllFiltered": "Select All (Filtered)",
+    "selectAllFiltered": "모두 선택",
     "selectSomeItems": "선택...",
     "create": "Create",
 }

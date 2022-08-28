@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { FaPlus, FaPen } from "react-icons/fa";
 import UrlFormContent from "../Form/UrlFormContent";
 import styled from "styled-components";
+import axios from "axios";
 
 const StyledButton = styled.button`
   background-color: #7a5ccd;
@@ -24,6 +25,36 @@ const LinkForm = ({ linkData }) => {
   const handleModalConfirm = () => {
     alert("저장");
   };
+
+  const getTagList =
+      async () => {
+        try {
+            const res = await axios({
+                url: 'tag/list', // 통신할 웹문서
+                method: 'get', // 통신할 방식
+            })
+            return res
+        } catch (err) {
+          console.log(err)
+        }
+      }
+    // const getCategoryList =
+    //     async () => {
+    //         try {
+    //             const res = await axios({
+    //                 url: '', // 통신할 웹문서
+    //                 method: 'get', // 통신할 방식
+    //             })
+    //             return res
+    //         } catch (err) {
+    //             console.log(err)
+    //         }
+    //     }
+
+  useEffect(()=>{
+        getTagList()
+      // getCategoryList()
+  },[])
   return (
     <>
       <StyledButton onClick={handleModalOpen}>
