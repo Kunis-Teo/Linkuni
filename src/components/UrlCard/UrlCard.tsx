@@ -3,34 +3,7 @@ import PencilIcon from "./PencilIcon";
 import DeleteIcon from "./DeleteIcon";
 import { StyledWrapper } from "./UrlCard.styled";
 import React from "react";
-
-// 임시로 추가해둠
-
-interface Tag {
-  id: number;
-  name: string;
-  createdAt: number;
-}
-
-interface Category {
-  id: number;
-  name: string;
-  isPinned: boolean;
-}
-
-interface URL {
-  id: number;
-  url: string;
-  title: string;
-  memo?: string;
-  imageUrl: string;
-  isStarred: boolean;
-  isWatched: boolean;
-  createdAt: number;
-  watchedAt: number;
-  tags?: Tag[];
-  category: Category;
-}
+import { URL } from "@/types";
 
 interface Props extends URL {}
 
@@ -46,6 +19,7 @@ const UrlCard = ({
   const handleUrlCardClick = () => {
     window.open(url);
   };
+
   return (
     <StyledWrapper onClick={handleUrlCardClick} isWatched={isWatched}>
       <div className="card-header">
@@ -63,8 +37,11 @@ const UrlCard = ({
 
       <div className="card-footer">
         <h3 className="footer-url">{url}</h3>
-        <div className="footer-icon-wrapper">
-          <LikeIcon isLiked={isStarred} />
+        <div
+          className="footer-icon-wrapper"
+          onClick={(event) => event.stopPropagation()}
+        >
+          <LikeIcon isStared={isStarred} cardId={id} />
           <PencilIcon />
           <DeleteIcon />
         </div>

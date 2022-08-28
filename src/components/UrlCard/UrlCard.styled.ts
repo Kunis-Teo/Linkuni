@@ -10,12 +10,14 @@ export const StyledWrapper = styled.div`
     );
   }}
 
+  flex: 0 0 auto;
   width: 210px;
   height: 180px;
   border: 1px solid #d4d4d4;
   border-radius: 16px;
   position: relative;
   cursor: pointer;
+
   .card-header {
     width: 100%;
     height: 100px;
@@ -53,7 +55,7 @@ export const StyledWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 10px;
     position: absolute;
     bottom: 0;
     border-top: 1px solid #d4d4d4;
