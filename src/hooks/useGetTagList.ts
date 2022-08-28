@@ -9,7 +9,7 @@ const useGetTagList = () => {
 
   useEffect(() => {
     (() => {
-      API.get<Tag[]>(`${process.env.REACT_APP_API_ENDPOINT}/tag/list`, {
+      API.get<Tag[]>("/tag/list", {
         headers: {
           Authorization: `Bearer ${process.env.REACT_APP_TOKEN}`,
         },
