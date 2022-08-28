@@ -7,6 +7,7 @@ import {
   StyledMask,
   StyledModalWrapper,
 } from "@/components/LinkForm/form.styled";
+import Selector, {DEFAULT_OPTIONS} from "@/components/Selector";
 
 type UrlFormProps = {
   linkData?: string | null;
@@ -24,6 +25,9 @@ const StyledTitle = styled.div`
 
 const UrlFormContent = ({ linkData, onConfirm, onClose }: UrlFormProps) => {
   const [close, setClose] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState([]);
+  const [selectedTag, setSelectedTag] = useState([]);
+
 
   const handleModalClose = () => {
     setClose(true);
@@ -56,9 +60,13 @@ const UrlFormContent = ({ linkData, onConfirm, onClose }: UrlFormProps) => {
           </StyledTitle>
           <FormInput name="link" label="링크" />
           <FormInput name="title" label="제목" />
-          <FormInput name="memo" label="메모" height="50px" />
           {/* 카테고리 */}
+          <Selector title={'카테고리'} options={DEFAULT_OPTIONS} selected={selectedCategory} setSelected={setSelectedCategory}/>
           {/* 태그 */}
+          <Selector title={'태그'} options={DEFAULT_OPTIONS} selected={selectedTag} setSelected={setSelectedTag}/>
+          <FormInput name="memo" label="메모" height="50px" />
+
+
 
           <div className="button-group">
             <Button color="gray" onClick={handleModalClose}>

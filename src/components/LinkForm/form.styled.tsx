@@ -63,7 +63,7 @@ export const StyledModalWrapper = styled.div<{ close: boolean }>`
   background: whitesmoke;
   border-radius: 10px;
   position: relative;
-  height: 420px;
+  height: 580px;
   width: 300px;
   padding: 25px;
 

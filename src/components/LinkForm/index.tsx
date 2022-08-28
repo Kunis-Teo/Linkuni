@@ -22,7 +22,7 @@ const LinkForm = ({ linkData }) => {
   const handleModalOpen = () => setVisible(true);
   const handleModalClose = () => setVisible(false);
   const handleModalConfirm = () => {
-    alert("updated!");
+    alert("저장");
   };
   return (
     <>
