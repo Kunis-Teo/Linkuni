@@ -3,9 +3,9 @@ import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 const LikeIcon = ({ isLiked }) => {
   const [state, setState] = useState<boolean>(isLiked);
-  // 할 수 있따
-  const handleIconClick = () => {
-    // 여기에다 적어주세요!
+
+  const handleIconClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    event.stopPropagation();
     setState((prev) => !prev);
   };
 
