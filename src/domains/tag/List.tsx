@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Tag from "@/components/Tag";
+
+import Tag from "@/components/Tag/Tag";
 import tags from "./mock.json";
 
 const StyledTagList = styled.div`
@@ -11,12 +12,12 @@ const StyledTagList = styled.div`
   justify-content: center;
 `;
 
-const List = () => {
+function List() {
   return (
     <StyledTagList>
       {React.Children.toArray(tags.map((tag) => <Tag>{tag.name}</Tag>))}
     </StyledTagList>
   );
-};
+}
 
 export default List;
