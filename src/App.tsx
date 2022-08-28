@@ -1,10 +1,15 @@
-import LinkForm from "./components/LinkForm/index";
+import React from "react";
+
+import RightBody from "@/components/RightBody/RightBody";
+import LinkForm from "@/components/LinkForm/index";
+import { Wrapper } from "./App.styled";
 
 function App() {
   return (
-    <>
-      {/*<LinkForm linkData={null} />*/}
-    </>
+    <Wrapper>
+      <RightBody />
+      <LinkForm linkData={null} />
+    </Wrapper>
   );
 }
 
