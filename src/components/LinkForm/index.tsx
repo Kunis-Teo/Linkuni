@@ -1,21 +1,9 @@
-import React, {useEffect, useState} from "react";
-import { FaPlus, FaPen } from "react-icons/fa";
-import UrlFormContent from "../Form/UrlFormContent";
-import styled from "styled-components";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { FaPlus, FaPen } from "react-icons/fa";
 
-const StyledButton = styled.button`
-  background-color: #7a5ccd;
-  margin: 5px;
-  border: none;
-  padding: 7px 10px;
-  border-radius: 50%;
-  color: #fff;
-  &:hover {
-    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-    scale: 1.01;
-  }
-`;
+import UrlFormContent from "@/components/Form/UrlFormContent";
+import { StyledButton } from "./LinkForm.styled";
 
 // props: linkData from linkCard
 const LinkForm = ({ linkData }) => {
@@ -26,35 +14,34 @@ const LinkForm = ({ linkData }) => {
     alert("저장");
   };
 
-  const getTagList =
-      async () => {
-        try {
-            const res = await axios({
-                url: 'tag/list', // 통신할 웹문서
-                method: 'get', // 통신할 방식
-            })
-            return res
-        } catch (err) {
-          console.log(err)
-        }
-      }
-    // const getCategoryList =
-    //     async () => {
-    //         try {
-    //             const res = await axios({
-    //                 url: '', // 통신할 웹문서
-    //                 method: 'get', // 통신할 방식
-    //             })
-    //             return res
-    //         } catch (err) {
-    //             console.log(err)
-    //         }
-    //     }
+  const getTagList = async () => {
+    try {
+      const res = await axios({
+        url: "tag/list", // 통신할 웹문서
+        method: "get", // 통신할 방식
+      });
+      return res;
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  // const getCategoryList =
+  //     async () => {
+  //         try {
+  //             const res = await axios({
+  //                 url: '', // 통신할 웹문서
+  //                 method: 'get', // 통신할 방식
+  //             })
+  //             return res
+  //         } catch (err) {
+  //             console.log(err)
+  //         }
+  //     }
 
-  useEffect(()=>{
-        getTagList()
-      // getCategoryList()
-  },[])
+  useEffect(() => {
+    getTagList();
+    // getCategoryList()
+  }, []);
   return (
     <>
       <StyledButton onClick={handleModalOpen}>
