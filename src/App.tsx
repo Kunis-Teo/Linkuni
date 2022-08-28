@@ -1,3 +1,4 @@
+import UrlCard from "@/components/UrlCard/UrlCard";
 import React from "react";
 
 import RightBody from "@/components/RightBody/RightBody";
