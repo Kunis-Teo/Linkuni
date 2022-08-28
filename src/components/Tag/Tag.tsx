@@ -1,14 +1,4 @@
-import styled from "styled-components";
-
-const StyledTag = styled.button`
-  padding: 4px 8px;
-  background-color: #ebedf0;
-  border-radius: 20px;
-
-  &:hover {
-    background-color: #ebedf090;
-  }
-`;
+import { StyledTag } from "./Tag.styled";
 
 type Props = {
   children: string;
