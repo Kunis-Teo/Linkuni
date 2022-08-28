@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/kunis-teo.github.io/linkuni/static/css/main.02bed038.css",
+    "main.js": "/kunis-teo.github.io/linkuni/static/js/main.54b5fb97.js",
+    "index.html": "/kunis-teo.github.io/linkuni/index.html",
+    "main.02bed038.css.map": "/kunis-teo.github.io/linkuni/static/css/main.02bed038.css.map",
+    "main.54b5fb97.js.map": "/kunis-teo.github.io/linkuni/static/js/main.54b5fb97.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02bed038.css",
+    "static/js/main.54b5fb97.js"
+  ]
+}
