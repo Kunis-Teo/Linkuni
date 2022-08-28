@@ -11,12 +11,14 @@ export const ContentsContainer = styled.div`
 		justify-content: space-between;
 
 		.category-name {
+			width: 100px;
 			border: none;
 			font-size: 18px;
 			font-weight: 900;
 		}
 
 		.icons {
+			margin: auto 0;
 			font-size: 18px;
 			cursor: pointer;
 		}
