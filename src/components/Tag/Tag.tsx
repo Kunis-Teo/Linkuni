@@ -1,24 +1,20 @@
 import React from "react";
+import { useSelectedTags } from "@/store/selectedTags";
+import { Tag as TagType } from "@/types";
 import { StyledTag } from "./Tag.styled";
 
 type Props = {
-  selected: string[];
-  children: string;
+  tag: TagType;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-/**
- *  @usage onClick={(e) => e.currentTarget.textContent.split(" ")[1]}
- */
 function Tag(props: Props) {
-  const { selected, children, onClick } = props;
+  const { tag, onClick } = props;
 
-  function checkSelected() {
-    return selected.includes(children);
-  }
+  const { hasSelectedTag } = useSelectedTags();
 
   return (
-    <StyledTag selected={checkSelected()} onClick={onClick}>
-      # {children}
+    <StyledTag selected={hasSelectedTag(tag)} onClick={onClick}>
+      # {tag.name}
     </StyledTag>
   );
 }

@@ -1,7 +1,9 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import styled from "styled-components";
 import Tag from "@/components/Tag";
 import useGetTagList from "@/hooks/useGetTagList";
+import { useSelectedTags } from "@/store/selectedTags";
+import { Tag as TagType } from "@/types";
 
 const StyledTagList = styled.div`
   display: flex;
@@ -13,35 +15,22 @@ const StyledTagList = styled.div`
 
 function List() {
   const { data } = useGetTagList();
+  const { addSelectedTag } = useSelectedTags();
 
   const tags = data?.tagDTOList;
 
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
-
   const onSelectTag = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
-      const textContent = e.currentTarget.textContent.split(" ")[1];
-
-      if (selectedTags.includes(textContent)) {
-        setSelectedTags([...selectedTags.filter((tag) => tag !== textContent)]);
-        return;
-      }
-
-      setSelectedTags([
-        ...selectedTags,
-        e.currentTarget.textContent.split(" ")[1],
-      ]);
+    (tag: TagType) => {
+      addSelectedTag(tag);
     },
-    [selectedTags]
+    [addSelectedTag]
   );
 
   return (
     <StyledTagList>
       {React.Children.toArray(
-        tags?.map((tag) => (
-          <Tag selected={selectedTags} onClick={onSelectTag}>
-            {tag.name}
-          </Tag>
+        tags?.map((tag: TagType) => (
+          <Tag tag={tag} onClick={() => onSelectTag(tag)} />
         ))
       )}
     </StyledTagList>

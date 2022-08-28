@@ -1,18 +1,21 @@
-import React from 'react';
+import React from "react";
+import { RecoilRoot } from "recoil";
 
-import RightBody from '@/components/RightBody/RightBody';
-import Category from '@/components/Category/Category';
-import Contents from '@/components/Category/Contents_new';
+import RightBody from "@/components/RightBody/RightBody";
+import Category from "@/components/Category/Category";
+import Contents from "@/components/Category/Contents_new";
 
-import { Wrapper } from './App.styled';
+import { Wrapper } from "./App.styled";
 
 function App() {
   return (
-    <Wrapper>
-      <Category />
-      <RightBody />
-      <Contents />
-    </Wrapper>
+    <RecoilRoot>
+      <Wrapper>
+        <Category />
+        <RightBody />
+        <Contents />
+      </Wrapper>
+    </RecoilRoot>
   );
 }
 
