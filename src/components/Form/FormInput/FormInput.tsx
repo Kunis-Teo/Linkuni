@@ -1,13 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 
-const StyledFormInput = styled.input<{ height: string }>`
-  border-radius: 5px;
-  padding: 5px 10px;
-  border: none;
-  width: 90%;
-  height: ${({ height }) => height};
-`;
+import { StyledFormInput } from "./FormInput.styled";
 
 const FormInput = ({ height = "20px", label, ...props }) => {
   return (

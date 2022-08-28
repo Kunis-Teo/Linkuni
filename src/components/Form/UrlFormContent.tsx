@@ -1,27 +1,19 @@
 import React, { useState } from "react";
 import { FaPaperclip } from "react-icons/fa";
-import FormInput from "./FormInput";
 import Button from "@/components/common/Button";
-import styled from "styled-components";
 import {
   StyledMask,
   StyledModalWrapper,
 } from "@/components/LinkForm/form.styled";
 import Selector, { DEFAULT_OPTIONS } from "@/components/Selector";
+import FormInput from "@/components/Form/FormInput/FormInput";
+import { StyledTitle } from "./UrlFormContent.styled";
 
 type UrlFormProps = {
   linkData?: string | null;
   onConfirm: () => void;
   onClose: () => void;
 };
-
-const StyledTitle = styled.div`
-  margin-top: 10px;
-  text-align: center;
-  color: #666;
-  font-weight: 500;
-  font-size: 18px;
-`;
 
 const UrlFormContent = ({ linkData, onConfirm, onClose }: UrlFormProps) => {
   const [close, setClose] = useState(false);
