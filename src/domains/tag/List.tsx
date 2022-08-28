@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
-import Tag from "@/components/Tag/Tag";
+import Tag from "@/components/Tag";
 import tags from "./mock.json";
 
 const StyledTagList = styled.div`
