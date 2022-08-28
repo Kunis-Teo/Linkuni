@@ -23,6 +23,18 @@ export const DEFAULT_OPTIONS = [
     { label: "#사과", value: "apple" , disabled: true},
 ];
 
+const LOCALIZAION ={
+    "allItemsAreSelected": "모두 선택",
+    "clearSearch": "Clear Search",
+    "clearSelected": "Clear Selected",
+    "noOptions": "No options",
+    "search": "검색",
+    "selectAll": "모두 선택",
+    "selectAllFiltered": "Select All (Filtered)",
+    "selectSomeItems": "선택...",
+    "create": "Create",
+}
+
 
 /**************************************************************
  *  다중요소를 선택하는 컴포넌트
@@ -40,6 +52,7 @@ const Selector = ({title,options,selected,setSelected}) => {
                     value={selected}
                     onChange={setSelected}
                     labelledBy="Select"
+                    overrideStrings={LOCALIZAION}
                 />
             </div>
         </div>

@@ -27,7 +27,7 @@ const UrlFormContent = ({ linkData, onConfirm, onClose }: UrlFormProps) => {
   const [close, setClose] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState([]);
   const [selectedTag, setSelectedTag] = useState([]);
-
+console.log('카테고리:',selectedCategory ,'태그:',selectedTag)
 
   const handleModalClose = () => {
     setClose(true);
