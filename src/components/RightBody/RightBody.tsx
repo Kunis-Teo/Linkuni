@@ -16,7 +16,13 @@ function RightBody() {
       <SearchPageWrapper>
         <img src="kangaroo.png" />
         <SearchPage />
-        <Tag onClick={(e) => console.log(e)}>React</Tag>
+        <Tag
+          onClick={(e) =>
+            console.log(e.currentTarget.textContent.split(" ")[1])
+          }
+        >
+          React
+        </Tag>
         <AddButton src="addbtn.png" onClick={handleAddButtonClick} />
       </SearchPageWrapper>
     </>

@@ -14,6 +14,9 @@ type Props = {
   children: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
+/**
+ *  @usage onClick={(e) => e.currentTarget.textContent.split(" ")[1]}
+ */
 const Tag = (props: Props) => {
   const { children, onClick } = props;
 
