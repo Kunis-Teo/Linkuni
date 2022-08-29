@@ -1,13 +1,16 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 
 import Header from "@/components/Header/Header";
 import SearchPage from "@/components/SearchPage/SearchPage";
 import TagList from "@/domains/tag/List";
 import { SearchPageWrapper, AddButton } from "./RightBody.styled";
+import LinkForm from "@/components/LinkForm";
 
 function RightBody() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   const handleAddButtonClick = useCallback(() => {
-    console.log("click");
+    setModalOpen(true);
   }, []);
 
   return (
@@ -19,6 +22,7 @@ function RightBody() {
         <TagList />
         <AddButton src="addbtn.png" onClick={handleAddButtonClick} />
       </SearchPageWrapper>
+      <LinkForm linkData={null} visible={modalOpen} setVisible={setModalOpen} />
     </>
   );
 }
