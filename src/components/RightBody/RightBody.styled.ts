@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const SearchPageWrapper = styled.div`
   display: flex;
@@ -9,7 +9,14 @@ export const SearchPageWrapper = styled.div`
   height: 300px;
 `;
 
+export const KangarooImage = styled.img`
+  width: 100px;
+  height: 150px;
+`;
+
 export const AddButton = styled.img`
+  margin-top: 15px;
+
   :hover {
     cursor: pointer;
   }
