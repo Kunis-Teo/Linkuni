@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useCallback } from "react";
 
 import Header from "@/components/Header/Header";
 import SearchPage from "@/components/SearchPage/SearchPage";
@@ -11,6 +11,10 @@ import { SearchPageWrapper, AddButton } from "./RightBody.styled";
 function RightBody() {
   const [modalOpen, setModalOpen] = useState(false);
 
+    const handleAddButtonClick = useCallback(() => {
+        setModalOpen(true);
+    }, []);
+
   return (
     <>
       <Header />
@@ -18,7 +22,7 @@ function RightBody() {
         <img src="kangaroo.png" />
         <SearchPage />
         <TagList />
-        <AddButton src="addbtn.png" />
+        <AddButton src="addbtn.png" onClick={handleAddButtonClick}/>
       </SearchPageWrapper>
       <LinkForm linkData={null} visible={modalOpen} setVisible={setModalOpen} />
       <UrlCardList categoryTitle="프론트엔드" cards={mockCardData} />

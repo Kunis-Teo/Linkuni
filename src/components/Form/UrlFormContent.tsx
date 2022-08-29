@@ -33,8 +33,8 @@ function UrlFormContent({ linkData, onConfirm, onClose }: UrlFormProps) {
 
   const handleModalClose = () => {
     setClose(true);
-    setClose(true);
   };
+
 
   const createLinkAction = async (payload) => {
     try {
@@ -68,7 +68,8 @@ function UrlFormContent({ linkData, onConfirm, onClose }: UrlFormProps) {
     e.preventDefault();
     const urlFormInput = new FormData(e.target);
     await setFormData(Object.fromEntries(urlFormInput.entries()));
-    return urlFormInput;
+    await createLinkAction(Object.fromEntries(urlFormInput.entries()));
+
   };
 
   /** ****************************************************************
@@ -76,9 +77,6 @@ function UrlFormContent({ linkData, onConfirm, onClose }: UrlFormProps) {
    ***************************************************************** */
   const handleConfirm = async () => {
     onConfirm();
-    const urlFormData = await handleClickSubmit;
-    // @ts-ignore
-    await createLinkAction(Object.fromEntries(urlFormData.entries()));
     handleModalClose();
   };
 

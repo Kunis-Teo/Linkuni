@@ -32,7 +32,7 @@ function Selector({ title, options, selected, setSelected,selectAll,singleSelect
         <p>{title}</p>
         {/* <pre>{JSON.stringify(selected)}</pre> */}
         <MultiSelect
-          options={DEFAULT_OPTIONS}
+          options={options}
           value={singleSelect?selected[0]?selected.slice(-1):selected:selected}
           onChange={setSelected}
           labelledBy="Select"
