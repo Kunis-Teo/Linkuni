@@ -1,6 +1,7 @@
 # :paperclip: Kunis :sparkles:
 
-<p align="center" width="500px"><img src="https://user-images.githubusercontent.com/106040138/187170192-29f3873c-8a57-4142-b6af-d94ff0c1beea.png" width="500px"><p>
+<p align="center" width="500px"><img src="https://user-images.githubusercontent.com/100752008/187191290-ad33b746-803d-4db7-aadb-cb204eea5017.png" width="500px"><p>
+
 
 
 ### <p align="center">당신의 URL을 간편하고 쉽게 정리하세요!<p>
