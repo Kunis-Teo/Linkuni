@@ -1,6 +1,6 @@
 # :paperclip: Kunis :sparkles:
 
-<p align="center" width="500px"><img src="https://user-images.githubusercontent.com/106040138/187149987-14bf6e52-7025-46ef-b0b7-e0a1453a3eb2.jpg" width="500px"><p>
+<p align="center" width="500px"><img src="https://user-images.githubusercontent.com/106040138/187170192-29f3873c-8a57-4142-b6af-d94ff0c1beea.png" width="500px"><p>
 
 
 ### <p align="center">당신의 URL을 간편하고 쉽게 정리하세요!<p>
@@ -8,11 +8,13 @@
 <br>
 
 
-# 서비스 바로가기
+# :sparkling_heart: 서비스 바로가기 :sparkling_heart:
 https://kunis-teo.github.io/Linkuni/
 
 
-# 프로젝트 개요
+<br>
+
+# :dizzy: 프로젝트 개요
 
 > [Linkuni]는 나중에 다시 보고싶은 링크들을 한 곳에 모아 정리하고 쉽게 찾아보기 위한 서비스입니다.
 > 
@@ -22,26 +24,26 @@ https://kunis-teo.github.io/Linkuni/
 
 <br/>
 
-## 기능소개
+# :exclamation: 기능소개
 
-1. 다시 보고싶은 링크를 태그와 함께 저장해요.
+:point_right: 다시 보고싶은 링크를 태그와 함께 저장해요.
 
-<p align="center"><img src=""></p>
+<p align="center"><img src="" width="500px"></p>
 
-2. 제목이나 태그를 검색하여 내가 저장해 놓은 링크를 쉽게 찾을 수 있어요!
+:point_right: 제목이나 태그를 검색하여 내가 저장해 놓은 링크를 쉽게 찾을 수 있어요!
 
-<p align="center"><img src=""></p>
+<p align="center"><img src="" width="500px"></p>
 
-3. 자주 보는 링크들은 하트 클릭 한번으로 즐겨찾기 할 수 있어요!
+:point_right: 자주 보는 링크들은 하트 클릭 한번으로 즐겨찾기 할 수 있어요!
 
-<p align="center"><img src=""></p>
+<p align="center"><img src="" width="500px"></p>
 
-4. 자주 이용하는 카테고리를 상단에 고정시킬 수 있어요!
+:point_right: 자주 이용하는 카테고리를 상단에 고정시킬 수 있어요!
 
-<p align="center"><img src=""></p>
+<p align="center"><img src="" width="500px"></p>
 
 
-## Tech stack
+# :balloon: Tech stack
 -
 -
 -
@@ -49,7 +51,17 @@ https://kunis-teo.github.io/Linkuni/
 -
 -
 
-## How to start! 
+# :computer: Get start
 
 
+### development :electric_plug:
+```
+npm i
+npm run build
+```
 
+### production[build] :electric_plug:
+```
+npm i
+npm run build
+```
