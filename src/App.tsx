@@ -1,21 +1,21 @@
 import React from "react";
-import Toast from "@/components/common/Toast";
-import RightBody from "@/components/RightBody/RightBody";
-import UrlCardList from "@/components/UrlCardList/UrlCardList";
-import { mockCardData } from "./mocks/mockCardData";
-import { Wrapper } from "./App.styled";
+import { RecoilRoot } from "recoil";
 
+import RightBody from "@/components/RightBody/RightBody";
+import Category from "@/components/Category/Category";
+import Contents from "@/components/Category/Contents_new";
+
+import { Wrapper } from "./App.styled";
 
 function App() {
   return (
-    <>
+    <RecoilRoot>
       <Wrapper>
+        <Category />
         <RightBody />
-        <UrlCardList categoryTitle="프론트엔드" cards={mockCardData} />
-        <UrlCardList categoryTitle="{categoryTitle}" cards={mockCardData} />
+        <Contents />
       </Wrapper>
-      <Toast />
-    </>
+    </RecoilRoot>
   );
 }
 

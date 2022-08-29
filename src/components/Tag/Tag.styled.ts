@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 
-export const StyledTag = styled.button`
+type StyledTagProps = {
+  selected: boolean;
+};
+
+export const StyledTag = styled.button<StyledTagProps>`
   padding: 4px 8px;
-  background-color: #ebedf0;
+  background-color: ${({ selected }) => (selected ? "#A4A5A8" : "#ebedf0")};
   border-radius: 20px;
 
   &:hover {

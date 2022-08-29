@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import API from "@/utils/API";
+import { Tag } from "@/types";
 
 const useGetTagList = () => {
   const [data, setData] = useState(null);
@@ -7,21 +9,17 @@ const useGetTagList = () => {
 
   useEffect(() => {
     (() => {
-      fetch(`${process.env.REACT_APP_API_ENDPOINT}/tag/list`, {
+      API.get<Tag[]>("/tag/list", {
         headers: {
           Authorization: `Bearer ${process.env.REACT_APP_TOKEN}`,
         },
       })
         .then((response) => {
-          return response.json();
-        })
-        .then((json) => {
-          console.log(json);
           setLoading(false);
-          setData(json);
+          setData(response.data);
         })
-        .catch((error) => {
-          setError(error);
+        .catch((e) => {
+          setError(e);
         });
     })();
   }, []);
