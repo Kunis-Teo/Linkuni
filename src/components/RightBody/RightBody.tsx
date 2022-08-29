@@ -32,7 +32,7 @@ function RightBody() {
       </SearchPageWrapper>
       <LinkForm linkData={null} visible={modalOpen} setVisible={setModalOpen} />
       <UrlCardList categoryTitle="프론트엔드" cards={mockCardData} />
-      <UrlCardList categoryTitle="{categoryTitle}" cards={mockCardData} />
+      <UrlCardList categoryTitle="즐겨찾기" cards={mockCardData} />
     </>
   );
 }
