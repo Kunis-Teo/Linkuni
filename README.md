@@ -24,41 +24,31 @@ https://kunis-teo.github.io/Linkuni/
 
 :point_right: 다시 보고싶은 링크를 태그와 함께 저장해요.
 
-<p align="center"><img src="" width="500px"></p>
-
-:point_right: 제목이나 태그를 검색하여 내가 저장해 놓은 링크를 쉽게 찾을 수 있어요!
-
-<p align="center"><img src="" width="500px"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/40374023/187209314-c6f6602d-d741-474e-be7a-c416085267a3.png" width="500px"></p>
 
 :point_right: 자주 보는 링크들은 하트 클릭 한번으로 즐겨찾기 할 수 있어요!
 
-<p align="center"><img src="" width="500px"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/40374023/187210236-e4d63bb7-fdf2-4b06-b996-16d130427a37.gif" width="500px"></p>
 
 :point_right: 자주 이용하는 카테고리를 상단에 고정시킬 수 있어요!
 
-<p align="center"><img src="" width="500px"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/40374023/187210271-ad15cfea-c411-433a-ae81-709bd3487137.gif" width="500px"></p>
 
 # :balloon: Tech stack
 
--
--
--
--
--
--
+<img src="https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=for-the-badge"/>
+
+<img src="https://img.shields.io/badge/-Recoil-61DAFB?logo=recoil&logoColor=white&style=for-the-badge"/>
+
+<img src="https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=Axios&logoColor=white"/>
 
 # :computer: Get start
 
-### development :electric_plug:
+### start
 
 ```
 npm i
-npm run build
-```
-
-### production[build] :electric_plug:
-
-```
-npm i
-npm run build
+npm start
 ```
