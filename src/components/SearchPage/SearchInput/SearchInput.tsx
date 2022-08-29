@@ -1,6 +1,6 @@
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useRef } from "react";
 
-import { Wrapper, Input, SearchIcon } from './SearchInput.styled';
+import { Wrapper, Input, SearchIcon } from "./SearchInput.styled";
 
 interface SearchInputProps {
   onSubmit?: (input: string) => void;
@@ -11,11 +11,12 @@ function SearchInput({ onSubmit }: SearchInputProps) {
 
   const onEnterKeyDown = useCallback(
     (e) => {
-      if (e.key === 'Enter') {
+      if (e.key === "Enter") {
+        alert("검색 기능은 아직 제공되지 않습니다 :(");
         if (onSubmit) onSubmit(inputRef.current.value);
       }
     },
-    [onSubmit],
+    [onSubmit]
   );
 
   const onIconClick = useCallback(() => {

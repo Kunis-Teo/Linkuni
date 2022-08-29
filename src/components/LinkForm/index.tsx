@@ -9,7 +9,7 @@ function LinkForm({ linkData, visible, setVisible }) {
   const handleModalOpen = () => setVisible(true);
   const handleModalClose = () => setVisible(false);
   const handleModalConfirm = () => {
-    alert("저장");
+    alert("저장을 하고싶은데..아직 오픈되지 않은 기능이에요 :(");
   };
 
   const getTagList = async () => {
