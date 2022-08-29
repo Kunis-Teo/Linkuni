@@ -25,7 +25,11 @@ function SearchInput({ onSubmit }: SearchInputProps) {
 
   return (
     <Wrapper>
-      <Input ref={inputRef} onKeyDown={onEnterKeyDown} />
+      <Input
+        placeholder="저장한 링크를 검색해주세요!"
+        ref={inputRef}
+        onKeyDown={onEnterKeyDown}
+      />
       <SearchIcon onClick={onIconClick} />
     </Wrapper>
   );
