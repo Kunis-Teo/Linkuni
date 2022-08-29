@@ -1,22 +1,7 @@
 import React from "react";
 import { MultiSelect } from "react-multi-select-component";
-
+/* eslint-disable */
 import "./Selector.css";
-
-/*
-interface IOPTION {
-  label: string;
-  apple: string;
-  disabled: boolean;
-}
-
-type TProps = {
-  title: string;
-  options: { label: string; value: string; disabled: boolean };
-  selected: string;
-  setSelected: void;
-};
-*/
 
 export const DEFAULT_OPTIONS = [
   { label: "#공부", value: "study" },
@@ -40,19 +25,20 @@ const LOCALIZAION = {
 /** ************************************************************
  *  다중요소를 선택하는 컴포넌트
  ************************************************************* */
-function Selector({ title, options, selected, setSelected }) {
-  // @ts-ignore
+function Selector({ title, options, selected, setSelected,selectAll,singleSelect }) {
+
   return (
     <div>
       <div>
         <p>{title}</p>
         {/* <pre>{JSON.stringify(selected)}</pre> */}
         <MultiSelect
-          options={options}
-          value={selected}
+          options={DEFAULT_OPTIONS}
+          value={singleSelect?selected[0]?selected.slice(-1):selected:selected}
           onChange={setSelected}
           labelledBy="Select"
           overrideStrings={LOCALIZAION}
+          hasSelectAll={selectAll}
         />
       </div>
     </div>
