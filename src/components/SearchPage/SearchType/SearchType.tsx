@@ -3,9 +3,9 @@ import React, {
   useState,
   forwardRef,
   useImperativeHandle,
-} from "react";
+} from 'react';
 
-import { Wrapper, Selector, Option } from "./SearchType.styled";
+import { Wrapper, Selector, Option } from './SearchType.styled';
 
 interface SearchTypeProps {
   selections: string[];
@@ -22,9 +22,9 @@ const SearchType = forwardRef<string, SearchTypeProps>(
       () =>
         selections.map((selection, i) => (
           <Option
-            isSelected={selectedIndex === i}
-            onClick={() => setSelectedIndex(i)}
-          >
+						isSelected={selectedIndex === i}
+						onClick={() => setSelectedIndex(i)}
+					>
             {selection}
           </Option>
         )),

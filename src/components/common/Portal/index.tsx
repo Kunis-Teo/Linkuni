@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { createPortal } from "react-dom";
+import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 type TProps = {
   id?: string;
@@ -11,8 +11,8 @@ function Portal({ id, children }: TProps) {
   const [isPortalMounted, setIsPortalMounted] = useState(false);
   // 동적으로 노드 생성
   useEffect(() => {
-    const element = document.createElement("div");
-    element.id = id ?? "portal";
+    const element = document.createElement('div');
+    element.id = id ?? 'portal';
     document.body.appendChild(element);
     portalDOMRef.current = element;
     setIsPortalMounted(true);

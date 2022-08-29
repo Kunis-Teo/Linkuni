@@ -3,8 +3,8 @@ import React, { useCallback, useState } from "react";
 import Header from "@/components/Header/Header";
 import SearchPage from "@/components/SearchPage/SearchPage";
 import TagList from "@/domains/tag/List";
-import { SearchPageWrapper, AddButton } from "./RightBody.styled";
 import LinkForm from "@/components/LinkForm";
+import { SearchPageWrapper, AddButton } from "./RightBody.styled";
 
 function RightBody() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -13,6 +13,7 @@ function RightBody() {
     setModalOpen(true);
   }, []);
 
+function RightBody() {
   return (
     <>
       <Header />
@@ -20,7 +21,7 @@ function RightBody() {
         <img src="kangaroo.png" />
         <SearchPage />
         <TagList />
-        <AddButton src="addbtn.png" onClick={handleAddButtonClick} />
+        <AddButton src="addbtn.png" />
       </SearchPageWrapper>
       <LinkForm linkData={null} visible={modalOpen} setVisible={setModalOpen} />
     </>

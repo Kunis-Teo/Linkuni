@@ -1,5 +1,5 @@
-import React from "react";
-import { AiFillDelete } from "react-icons/ai";
+import React from 'react';
+import { AiFillDelete } from 'react-icons/ai';
 
 // 삭제하시겠습니까 ?
 function Delete() {

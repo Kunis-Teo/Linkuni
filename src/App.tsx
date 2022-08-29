@@ -1,10 +1,10 @@
 import React from "react";
+import Toast from "@/components/common/Toast";
 import RightBody from "@/components/RightBody/RightBody";
 import UrlCardList from "@/components/UrlCardList/UrlCardList";
 import { mockCardData } from "./mocks/mockCardData";
-
 import { Wrapper } from "./App.styled";
-import Toast from "@/components/common/Toast";
+
 
 function App() {
   return (

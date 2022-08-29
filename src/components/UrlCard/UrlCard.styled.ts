@@ -1,76 +1,77 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const StyledWrapper = styled.div`
-  ${({ isWatched }: { isWatched: boolean }) =>
+	${({ isWatched }: { isWatched: boolean }) =>
     isWatched &&
-    css`
-      opacity: 0.5;
-    `}
+		css`
+			opacity: 0.5;
+		`}
 
-  flex: 0 0 auto;
-  width: 210px;
-  height: 180px;
-  border: 1px solid #d4d4d4;
-  border-radius: 16px;
-  position: relative;
-  cursor: pointer;
+	flex: 0 0 auto;
+	width: 210px;
+	height: 180px;
+	border: 1px solid #d4d4d4;
+	border-radius: 16px;
+	position: relative;
+	cursor: pointer;
 
-  .card-header {
-    width: 100%;
-    height: 100px;
-    border-bottom: 1px solid #d4d4d4;
-  }
+	.card-header {
+		width: 100%;
+		height: 100px;
+		border-bottom: 1px solid #d4d4d4;
+		padding:0;
+	}
 
-  .header-image {
-    border-radius: 16px 16px 0 0;
-    width: 100%;
-    height: 100px;
-  }
+	.header-image {
+		border-radius: 16px 16px 0 0;
+		width: 100%;
+		height: 100px;
+	}
 
-  .card-body {
-    width: 100%;
-    padding: 10px;
-  }
+	.card-body {
+		width: 100%;
+		padding: 10px;
+	}
 
-  .body-title {
-    font-size: 14px;
-    font-weight: 900;
-    padding-bottom: 6px;
-  }
+	.body-title {
+		font-size: 14px;
+		font-weight: 900;
+		padding-bottom: 6px;
+	}
 
-  .body-tag {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 12px;
-    color: gray;
-  }
+	.body-tag {
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		font-size: 12px;
+		color: gray;
+	}
 
-  .card-footer {
-    width: 100%;
-    height: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-    position: absolute;
-    bottom: 0;
-    border-top: 1px solid #d4d4d4;
+	.card-footer {
+		width: 100%;
+		height: 30px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 10px;
+		position: absolute;
+		bottom: 0;
+		border-top: 1px solid #d4d4d4;
 
-    .footer-icon-wrapper {
-      display: flex;
+		.footer-icon-wrapper {
+			display: flex;
 
-      & > :not(:last-child) {
-        margin-right: 6px;
-      }
-    }
-  }
+			& > :not(:last-child) {
+				margin-right: 6px;
+			}
+		}
+	}
 
-  .footer-url {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 12px;
-    color: gray;
-  }
+	.footer-url {
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		font-size: 12px;
+		color: gray;
+	}
 `;

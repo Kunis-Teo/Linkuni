@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import React, { useState } from 'react';
+import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 
 interface Props {
   isStared: boolean;

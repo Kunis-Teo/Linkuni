@@ -1,7 +1,7 @@
-import React from "react";
-import { BsPersonCircle } from "react-icons/bs";
+import React from 'react';
+import { BsPersonCircle } from 'react-icons/bs';
 
-import { Wrapper, PersonIconWrapper } from "./Header.styled";
+import { Wrapper, PersonIconWrapper } from './Header.styled';
 
 function Header() {
   return (

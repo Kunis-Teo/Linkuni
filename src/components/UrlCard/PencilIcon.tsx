@@ -1,5 +1,5 @@
-import React from "react";
-import { BsPencilFill } from "react-icons/bs";
+import React from 'react';
+import { BsPencilFill } from 'react-icons/bs';
 
 // open modal 로직
 function Pencil() {

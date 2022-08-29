@@ -1,5 +1,5 @@
-import React from "react";
-import { StyledTag } from "./Tag.styled";
+import React from 'react';
+import { StyledTag } from './Tag.styled';
 
 type Props = {
   children: string;
@@ -11,7 +11,12 @@ type Props = {
 function Tag(props: Props) {
   const { children, onClick } = props;
 
-  return <StyledTag onClick={onClick}># {children}</StyledTag>;
+  return (
+    <StyledTag onClick={onClick}>
+      #
+      {children}
+    </StyledTag>
+  );
 }
 
 export default Tag;

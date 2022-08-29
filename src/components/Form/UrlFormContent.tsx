@@ -11,6 +11,8 @@ import {
 } from "./UrlFormContent.styled";
 import API from "@/utils/API";
 /* eslint-disable */
+} from './UrlFormContent.styled';
+
 type UrlFormProps = {
   linkData?: string | null;
   onConfirm: () => void;
@@ -119,7 +121,10 @@ function UrlFormContent({ linkData, onConfirm, onClose }: UrlFormProps) {
         <form onSubmit={handleClickSubmit}>
           <StyledTitle>
             <FaPaperclip />
-            <span> {linkData ? "링크 수정" : "링크 추가"}</span>
+            <span>
+              {' '}
+              {linkData ? '링크 수정' : '링크 추가'}
+            </span>
           </StyledTitle>
           <FormInput name="link" label="링크" />
           <FormInput name="title" label="제목" />
