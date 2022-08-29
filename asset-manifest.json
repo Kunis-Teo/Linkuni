@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Linkuni/static/css/main.02bed038.css",
-    "main.js": "/Linkuni/static/js/main.625c4c55.js",
+    "main.css": "/Linkuni/static/css/main.b0e1faa5.css",
+    "main.js": "/Linkuni/static/js/main.2669a6db.js",
     "index.html": "/Linkuni/index.html",
-    "main.02bed038.css.map": "/Linkuni/static/css/main.02bed038.css.map",
-    "main.625c4c55.js.map": "/Linkuni/static/js/main.625c4c55.js.map"
+    "main.b0e1faa5.css.map": "/Linkuni/static/css/main.b0e1faa5.css.map",
+    "main.2669a6db.js.map": "/Linkuni/static/js/main.2669a6db.js.map"
   },
   "entrypoints": [
-    "static/css/main.02bed038.css",
-    "static/js/main.625c4c55.js"
+    "static/css/main.b0e1faa5.css",
+    "static/js/main.2669a6db.js"
   ]
 }
