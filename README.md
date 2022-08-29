@@ -1,21 +1,55 @@
-# Kunis!
+# :paperclip: Kunis :sparkles:
 
-url을 간편하게 관리해보세요!!!
+<p align="center" width="500px"><img src="https://user-images.githubusercontent.com/106040138/187149987-14bf6e52-7025-46ef-b0b7-e0a1453a3eb2.jpg" width="500px"><p>
 
-## commit comvention
 
-https://www.conventionalcommits.org/en/v1.0.0/
+### <p align="center">당신의 URL을 간편하고 쉽게 정리하세요!<p>
 
-해당 페이지와 약간 변형한 Angular의 commit convention을 따릅니다.
+<br>
 
-- chore : 외부 dependency나 config들을 수정할 때 사용합니다. (example scopes: gulp, broccoli, npm)
-- docs: 문서 내용을 갱신할 때 사용합니다.
-- feat: 이 커밋으로 새로운 feature가 안정적으로 추가 될 때 사용합니다.
-- fix: 버그 픽스 시에 사용합니다.
-- refactor: 버그가 아니고, 코드의 행동도 그대로지만, 로직의 내용이 바뀌었을 때, 사용합니다.
-- style: 로직에 관여하지 않는 모든 코드 수정할 때 사용합니다.
-- test: 테스트를 추가, 수정, 삭제시에 사용합니다.
 
-# Git branch 전략
+# 서비스 바로가기
+https://kunis-teo.github.io/Linkuni/
 
-![git branch strategy](./docs/gitbranch.png)
+
+# 프로젝트 개요
+
+> [Linkuni]는 나중에 다시 보고싶은 링크들을 한 곳에 모아 정리하고 쉽게 찾아보기 위한 서비스입니다.
+> 
+
+> URL을 저장할 때 달아놓은 태그를 이용해 태그별로 URL을 분리하여 키워드 검색이 가능합니다.  
+
+
+<br/>
+
+## 기능소개
+
+1. 다시 보고싶은 링크를 태그와 함께 저장해요.
+
+<p align="center"><img src=""></p>
+
+2. 제목이나 태그를 검색하여 내가 저장해 놓은 링크를 쉽게 찾을 수 있어요!
+
+<p align="center"><img src=""></p>
+
+3. 자주 보는 링크들은 하트 클릭 한번으로 즐겨찾기 할 수 있어요!
+
+<p align="center"><img src=""></p>
+
+4. 자주 이용하는 카테고리를 상단에 고정시킬 수 있어요!
+
+<p align="center"><img src=""></p>
+
+
+## Tech stack
+-
+-
+-
+-
+-
+-
+
+## How to start! 
+
+
+
