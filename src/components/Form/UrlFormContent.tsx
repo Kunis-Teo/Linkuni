@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { FaPaperclip } from "react-icons/fa";
 import { toast } from "react-toastify";
+
 import Button from "@/components/common/Button";
 import Selector from "@/components/Selector";
 import FormInput from "@/components/Form/FormInput/FormInput";
+import API from "@/utils/API";
 import {
   StyledMask,
   StyledModalWrapper,
   StyledTitle,
 } from "./UrlFormContent.styled";
-import API from "@/utils/API";
-/* eslint-disable */
-} from './UrlFormContent.styled';
 
 type UrlFormProps = {
   linkData?: string | null;
@@ -29,6 +28,7 @@ function UrlFormContent({ linkData, onConfirm, onClose }: UrlFormProps) {
   const [category, setCategory] = useState<any>([]);
   const [teg, setTag] = useState<any>([]);
 
+  /* eslint-disable-next-line */
   const [formData, setFormData] = useState<any>([]);
 
   const handleModalClose = () => {
@@ -87,6 +87,7 @@ function UrlFormContent({ linkData, onConfirm, onClose }: UrlFormProps) {
    ***************************************************************** */
   const ArrayChangeKey = (arr) => {
     const newArr = [];
+    /* eslint-disable-next-line */
     arr.map((item) => {
       newArr.push({ label: item.name, value: item.id });
     });
@@ -95,6 +96,7 @@ function UrlFormContent({ linkData, onConfirm, onClose }: UrlFormProps) {
 
   const ArrayChangeKey2 = (arr) => {
     const newArr = [];
+    /* eslint-disable-next-line */
     arr.map((item) => {
       newArr.push({ tag_id: item.value });
     });
@@ -121,10 +123,7 @@ function UrlFormContent({ linkData, onConfirm, onClose }: UrlFormProps) {
         <form onSubmit={handleClickSubmit}>
           <StyledTitle>
             <FaPaperclip />
-            <span>
-              {' '}
-              {linkData ? '링크 수정' : '링크 추가'}
-            </span>
+            <span> {linkData ? "링크 수정" : "링크 추가"}</span>
           </StyledTitle>
           <FormInput name="link" label="링크" />
           <FormInput name="title" label="제목" />

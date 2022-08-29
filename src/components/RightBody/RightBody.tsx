@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 
 import Header from "@/components/Header/Header";
 import SearchPage from "@/components/SearchPage/SearchPage";
@@ -11,11 +11,6 @@ import { SearchPageWrapper, AddButton } from "./RightBody.styled";
 function RightBody() {
   const [modalOpen, setModalOpen] = useState(false);
 
-  const handleAddButtonClick = useCallback(() => {
-    setModalOpen(true);
-  }, []);
-
-function RightBody() {
   return (
     <>
       <Header />
