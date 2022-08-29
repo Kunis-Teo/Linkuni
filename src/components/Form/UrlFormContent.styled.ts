@@ -1,11 +1,12 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css, keyframes } from "styled-components";
 
 export const StyledTitle = styled.div`
-	margin-top: 10px;
-	text-align: center;
-	color: #666;
-	font-weight: 500;
-	font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #666;
+  font-weight: 500;
+  font-size: 18px;
 `;
 
 export const keyframeSlideUp = keyframes`
@@ -43,39 +44,47 @@ export const keyframeFadeOut = keyframes`
 `;
 
 export const StyledMask = styled.div<{ close: boolean }>`
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 99;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 
-	align-items: center;
-	background: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
 
-	${({ close }) => css`
-		opacity: ${close ? 0 : 1};
-		animation: ${close ? keyframeFadeOut : keyframeFadeIn} 0.25s;
-	`}
+  ${({ close }) => css`
+    opacity: ${close ? 0 : 1};
+    animation: ${close ? keyframeFadeOut : keyframeFadeIn} 0.25s;
+  `}
 `;
 
 export const StyledModalWrapper = styled.div<{ close: boolean }>`
-	${({ close }) => css`
-		animation: ${close ? keyframeSlideDown : keyframeSlideUp} 0.25s;
-	`}
+  ${({ close }) => css`
+    animation: ${close ? keyframeSlideDown : keyframeSlideUp} 0.25s;
+  `}
+  &  p {
+    margin-bottom: 10px;
+  }
+  & input,
+  .multi-select {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 
-	background: whitesmoke;
-	border-radius: 10px;
-	position: relative;
-	height: 580px;
-	width: 300px;
-	padding: 25px;
+  background: whitesmoke;
+  border-radius: 10px;
+  position: relative;
+  height: 580px;
+  width: 300px;
+  padding: 25px;
 
-	.button-group {
-		position: absolute;
-		bottom: 20px;
-		right: 25px;
-	}
+  .button-group {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+  }
 `;

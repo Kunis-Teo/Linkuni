@@ -25,7 +25,7 @@ function List() {
     },
     [addSelectedTag]
   );
-
+  if (!data) return <>태그 데이터가 아직 없어요 :( </>;
   return (
     <StyledTagList>
       {React.Children.toArray(
