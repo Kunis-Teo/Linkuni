@@ -1,13 +1,16 @@
+
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FaPlus, FaPen } from 'react-icons/fa';
 
+/* eslint-disable */
+import UrlFormContent from "@/components/Form/UrlFormContent";
 import UrlFormContent from '@/components/Form/UrlFormContent';
 import { StyledButton } from './LinkForm.styled';
 
 // props: linkData from linkCard
-function LinkForm({ linkData }) {
-  const [visible, setVisible] = useState(false);
+function LinkForm({ linkData , visible,setVisible }) {
   const handleModalOpen = () => setVisible(true);
   const handleModalClose = () => setVisible(false);
   const handleModalConfirm = () => {
@@ -38,15 +41,8 @@ function LinkForm({ linkData }) {
   //         }
   //     }
 
-  useEffect(() => {
-    getTagList();
-    // getCategoryList()
-  }, []);
   return (
     <>
-      <StyledButton onClick={handleModalOpen}>
-        {linkData ? <FaPen /> : <FaPlus />}
-      </StyledButton>
       {visible && (
         <UrlFormContent
           linkData={linkData}
